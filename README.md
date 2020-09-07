@@ -1,3 +1,7 @@
 
 # Auditorialized
-Solving Captcha's on Amazon Checkout Pages using Amazon's Transcribe Automatic Speech Recognition Service
+Solving Amazon Checkout Captchas Using the AWS Medical Transcription Service
+
+<p align="center">
+	<img src ="static/demo.gif">
+</p>
