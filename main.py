@@ -29,7 +29,8 @@ def gen_new_image_captcha():
 
 def gen_new_audio_captcha():
 	url = 'https://www.amazon.com/ap/captcha?appAction=SIGNIN&captchaObfuscationLevel=ape%3AaGFyZA%3D%3D&captchaType=audio'
-	res = requests.get(url)
+	headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+	res = requests.get(url, headers=headers)
 	fileName = 'captchas/{}.mp3'.format(gen_captcha_image_name())
 	download_mp3(res.json().get('captchaImageUrl'), fileName)
 	trim_audio(fileName)
